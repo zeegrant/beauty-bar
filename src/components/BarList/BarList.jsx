@@ -10,7 +10,7 @@ export default function BarList({ barItems, handleAddToOrder }) {
     />
   );
   return (
-    <main className="MenuList">
+    <main className="BarList">
       {items}
     </main>
   );

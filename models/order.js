@@ -9,7 +9,7 @@ const lineItemSchema = new Schema({
     item: itemSchema
 }, {
     timestamps: true,
-    toJson: { virtuals: true }
+    toJSON: { virtuals: true }
 })
 
 lineItemSchema.virtual('extPrice').get(function() {
@@ -37,4 +37,35 @@ orderSchema.virtual('orderId').get(function () {
     return this.id.slice(-6).toUpperCase();
   });  
 
+orderSchema.statics.getCart = function(userId) {
+    return this.findOneAndUpdate(
+        { user: userId, isPaid: false },
+        { user: userId },
+        { upsert: true, new: true }
+      );
+  };
+
+  orderSchema.methods.addItemToCart = async function (itemId) {
+    const cart = this;
+    const lineItem = cart.lineItems.find(lineItem => lineItem.item._id.equals(itemId));
+    if (lineItem) {
+      lineItem.qty += 1;
+    } else {
+      const item = await mongoose.model('Item').findById(itemId);
+      cart.lineItems.push({ item });
+    }
+    return cart.save();
+  };  
+
+  orderSchema.methods.setItemQty = function(itemId, newQty) {
+    const cart = this;
+    const lineItem = cart.lineItems.find(lineItem => lineItem.item._id.equals(itemId));
+    if (lineItem && newQty <= 0) {
+      lineItem.remove();
+    } else if (lineItem) {
+      lineItem.qty = newQty;
+    }
+    return cart.save();
+  };  
+  
 module.exports = mongoose.model('Order', orderSchema)
