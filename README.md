@@ -1,9 +1,9 @@
 # Beauty Bar
-## Clean beauty is a response to the beauty industry and ever growing concerns about the safety of cosmetics and skin care products. This movement is all about transparency and educating consumers about the ingredients in their products. We at Beauty Bar seek to make the experience of shopping for these products easier. Beauty Bar pledges to only carry products with the lowest environmental and health impact scores of 3 or less. Our salon services incorporate the best healing practices with amazing products for an one of a kind beauty experience!
+### Clean beauty is a response to the beauty industry and ever growing concerns about the safety of cosmetics and skin care products. This movement is all about transparency and educating consumers about the ingredients in their products. We at Beauty Bar seek to make the experience of shopping for these products easier. Beauty Bar pledges to only carry products with the lowest environmental and health impact scores of 3 or less. Our salon services incorporate the best healing practices with amazing products for an one of a kind beauty experience!
 
-https://imagizer.imageshack.com/img924/9854/M2vrdZ.png
+<img src="https://imagizer.imageshack.com/v2/xq90/924/M2vrdZ.png" border="0">
 
-https://imagizer.imageshack.com/img922/8266/H9skcu.png
+<img src="https://imagizer.imageshack.com/v2/xq90/922/H9skcu.png" border="0">
 
 
 ## Technologies Used
