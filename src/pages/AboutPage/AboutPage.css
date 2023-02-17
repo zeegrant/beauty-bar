@@ -1,0 +1,15 @@
+.AboutPage {
+    height: 100%;
+    display: grid;
+    color: #615954;
+    background-color: var(--white);
+    border-radius: 2vmin;
+  }
+  
+  .AboutPage aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vmin 2vmin;
+  }
