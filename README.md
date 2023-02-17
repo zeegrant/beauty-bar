@@ -9,7 +9,9 @@
 ## Technologies Used
 * CSS
 * JavaScript
-* Express
+* React
+* MongoDB
+* Node Js
 * HTML
 * Heroku
 * Tailwind
